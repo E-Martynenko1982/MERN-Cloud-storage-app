@@ -1,0 +1,40 @@
+@use "./variables" as *;
+@use "./globals";
+
+body {
+  font-family: $font-main;
+  background-color: $color-background;
+  color: $color-text;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Контейнер для всього контенту */
+.app-container {
+  width: 100%;
+  max-width: 1440px;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h1 {
+  color: $color-primary;
+  font-size: 20px;
+  font-weight: bold;
+}
