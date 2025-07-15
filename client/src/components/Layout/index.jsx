@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 const Layout = () => (
   <>
     <Header />
-    <main style={{ flex: 1, padding: '20px' }}>
+    <main style={{ flex: 1, padding: '0 20px' }}>
       <Outlet />
     </main>
     <Footer />

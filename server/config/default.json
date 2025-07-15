@@ -1,5 +1,6 @@
 {
 	"serverPort": 5000,
 	"dbUrl": "mongodb+srv://motor8103:j2pHsM7wG9FOwzo9@cloud.msvso8i.mongodb.net/?retryWrites=true&w=majority&appName=cloud",
-	"secretKey": "mern-secret-key"
+	"secretKey": "mern-secret-key",
+	"filePath": "C:UsersdellDesktopMERN-Cloud-storage-appserver\files"
 }

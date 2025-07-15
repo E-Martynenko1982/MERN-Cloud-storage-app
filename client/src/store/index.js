@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import userReducer from "../components/user/userSlice";
-import fileReducer from "../components/file/fileSlice";
+import userReducer from "./user/userSlice";
+import fileReducer from "./file/fileSlice";
 
 
 
