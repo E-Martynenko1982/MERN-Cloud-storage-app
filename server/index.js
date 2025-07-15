@@ -20,7 +20,7 @@ const start = async () => {
 
     })
   } catch (error) {
-
+    console.error('Server start error:', error);
   }
 }
 

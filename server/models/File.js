@@ -8,7 +8,7 @@ const File = new Schema({
   path: { type: String, default: "" },
   user: { type: Schema.Types.ObjectId, ref: "User" },
   parent: { type: Schema.Types.ObjectId, ref: "File" },
-  childs: { type: Schema.Types.ObjectId, ref: "File" }
+  childs: [{ type: Schema.Types.ObjectId, ref: "File" }]
 })
 
 module.exports = model("File", File)

@@ -17,7 +17,6 @@ class FileController {
         parentFile.childs.push(file._id);
         await parentFile.save();
       }
-      await fileService.save();
       return res.json(file);
     } catch (error) {
       console.log(error);
