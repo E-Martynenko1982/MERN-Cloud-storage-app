@@ -6,10 +6,11 @@ class FileController {
   async createDir(req, res) {
     try {
       const { name, type, parent } = req.body;
-      const file = new File({ name, type, parent, user: user.id });
-      const parentFile = await File.findOne({ _id: parent })
+      const file = new File({ name, type, parent, user: req.user.id });
+      const parentFile = await File.findById(parent);
+      console.log('parentFile:', parentFile);
       if (!parentFile) {
-        file.path = name;
+        file.path = file.name;
         await fileService.createDir(file);
       } else {
         file.path = `${parentFile.path}\\${file.name}`
@@ -17,12 +18,14 @@ class FileController {
         parentFile.childs.push(file._id);
         await parentFile.save();
       }
+      await file.save();
       return res.json(file);
     } catch (error) {
       console.log(error);
       return res.status(400).json(error);
     }
   }
+
 }
 
 module.exports = new FileController();
